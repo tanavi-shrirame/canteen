@@ -1,0 +1,325 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #222;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+
+.navbar {
+  height: 70px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+nav button {
+  background: transparent;
+  padding: 10px 14px;
+  font-size: 15px;
+  border-radius: 8px;
+}
+
+nav button:hover {
+  background: #eeeeee;
+}
+
+/* HOME */
+
+.hero {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 10%;
+  background: white;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.tagline {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+.description {
+  max-width: 520px;
+  color: #666;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.hero-food {
+  font-size: 200px;
+}
+
+/* BUTTON */
+
+.primary-btn {
+  background: #111;
+  color: white;
+  padding: 14px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* PAGES */
+
+.page {
+  max-width: 1100px;
+  margin: auto;
+  padding: 50px 25px;
+}
+
+.page h1 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* FOOD */
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.food-card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.food-emoji {
+  font-size: 70px;
+  margin-bottom: 15px;
+}
+
+.food-card h2 {
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 12px;
+  background: #111;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.add-btn:hover {
+  background: #333;
+}
+
+/* CART */
+
+.cart-box {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 750px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 25px;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-name {
+  font-size: 17px;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quantity button {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: #eeeeee;
+  font-size: 18px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 25px 0;
+}
+
+.full-btn {
+  width: 100%;
+}
+
+/* EMPTY */
+
+.empty-box {
+  text-align: center;
+  padding: 70px 20px;
+  background: white;
+  border-radius: 15px;
+}
+
+.empty-icon {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.empty-box h2 {
+  margin-bottom: 20px;
+}
+
+/* QUEUE */
+
+.queue-page {
+  text-align: center;
+}
+
+.queue-box {
+  max-width: 500px;
+  margin: 40px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  margin: auto auto 20px;
+  border-radius: 50%;
+  background: #eeeeee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.queue-box h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.queue-number {
+  margin: 30px 0;
+  padding: 25px;
+  border-radius: 15px;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.queue-number strong {
+  font-size: 60px;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    height: auto;
+    padding: 15px 5%;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 7%;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-food {
+    font-size: 100px;
+    margin-top: 40px;
+  }
+
+  .food-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-item {
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+  }
+
+}
